@@ -11,20 +11,22 @@ class AppStoreDownload extends React.Component {
     }
 
     render(){
+
+        var version = this.props.version
+
+
+        version = "android"
+
         return(
 
             <div>
-                <div>
-                <img src={ios} alt="ios" onClick={this.myfunction} height="200px"/>
-                </div>
-                <div>
-                <img src={android} alt="android" onClick={this.myfunction} height="200px"/> 
-                </div>
-
-                hey
-
+                <img
+                    alt="" onClick={this.myfunction}
+                    style={{cursor: "pointer"}}
+                    src={version === "ios" ? ios : version === "android" ? android : console.log("use \"android\" or \"ios\"")} 
+                    height="50px"/>
+                {/* <img src={android} alt="android" onClick={this.myfunction} height="200px"/>  */}
             </div>
-
         )
 
     }
