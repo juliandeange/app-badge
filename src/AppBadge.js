@@ -7,7 +7,7 @@ import spotify from "./badges/spotify.png"
 
 // 510 x 160 image dimensions
 
-class AppStoreDownload extends React.Component {
+class AppBadge extends React.Component {
 
     badgeClicked(link){
 
@@ -52,10 +52,7 @@ class AppStoreDownload extends React.Component {
                     />
             </div>
         )
-
     }
-
-
 }
 
-export default AppStoreDownload;
+export default AppBadge;
