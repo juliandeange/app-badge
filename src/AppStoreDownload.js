@@ -1,6 +1,8 @@
 import React from 'react';
-import android from "./badges/android.png"
+import amazon from "./badges/amazon.png"
+import google from "./badges/google.png"
 import ios from "./badges/ios.png"
+import windows from "./badges/windows10.png"
 
 class AppStoreDownload extends React.Component {
 
@@ -13,9 +15,20 @@ class AppStoreDownload extends React.Component {
     render(){
 
         var version = this.props.version
-
-
-        version = "android"
+        version = "google"
+        var icon
+        if (version === "amazon")
+            icon = amazon
+        else if (version === "google")
+            icon = google
+        else if (version === "ios")
+            icon = ios
+        else if (version === "windows")
+            icon = windows
+        else {
+            // icon = ""
+            console.log("use \"android\" or \"ios\"")
+        }
 
         return(
 
@@ -23,8 +36,8 @@ class AppStoreDownload extends React.Component {
                 <img
                     alt="" onClick={this.myfunction}
                     style={{cursor: "pointer"}}
-                    src={version === "ios" ? ios : version === "android" ? android : console.log("use \"android\" or \"ios\"")} 
-                    height="50px"/>
+                    src={icon} 
+                    />
                 {/* <img src={android} alt="android" onClick={this.myfunction} height="200px"/>  */}
             </div>
         )
