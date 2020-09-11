@@ -11,7 +11,9 @@ class AppBadge extends React.Component {
 
     badgeClicked(link){
 
-        window.location.href=link;
+        // window.location.href=link;
+        // https://apps.apple.com/ca/app/covid-alert/id1520284227
+        window.open(link, "_blank") //to open new page
 
     }
 
@@ -22,8 +24,8 @@ class AppBadge extends React.Component {
         var width = this.props.width
         var url = this.props.url
 
-        version = "google"
-        url = "https://google.ca"
+        version = "windows"
+        url = "https://apps.apple.com/ca/app/covid-alert/id1520284227"
         
         var icon
 
@@ -50,10 +52,10 @@ class AppBadge extends React.Component {
         }
 
         return(
-
             <div>
                 <img
-                    alt="" onClick={() => this.badgeClicked(url)}
+                    alt="badge" 
+                    onClick={() => this.badgeClicked(url)}
                     style={{cursor: "pointer"}}
                     src={icon} 
                     height={height !== undefined ? height : 50}
