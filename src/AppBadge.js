@@ -22,22 +22,31 @@ class AppBadge extends React.Component {
         var width = this.props.width
         var url = this.props.url
 
-        version = "ios"
-
-
+        version = "google"
+        url = "https://google.ca"
+        
         var icon
-        if (version === "amazon")
-            icon = amazon
-        else if (version === "google")
-            icon = google
-        else if (version === "ios")
-            icon = ios
-        else if (version === "spotify")
-            icon = spotify
-        else if (version === "windows")
-            icon = windows
-        else {
-            icon = null
+
+        switch(version){
+
+            case "amazon":
+                icon = amazon
+                break
+            case "google":
+                icon = google
+                break
+            case "ios":
+                icon = ios
+                break
+            case "spotify":
+                icon = spotify
+                break
+            case "windows":
+                icon = windows
+                break
+            default:
+                icon = null
+
         }
 
         return(
