@@ -25,5 +25,5 @@ Property | Type | Description
 version | `string` | `"amazon"` `"google"` `"ios"` `"spotify"` `"windows"`
 height | `string` | Specify the height of the badge in pixels, will default to `50`.
 width | `string` | Specify the width of the badge in pixels.
-url | `string` | URL to link to when bade is clicked.
+url | `string` | URL to link to when badge is clicked.
 
