@@ -11,7 +11,8 @@ class AppBadge extends React.Component {
 
     badgeClicked(link){
 
-        window.open(link, "_blank") //to open new page
+        if (link !== undefined)
+            window.open(link, "_blank") //to open new page
 
     }
 
@@ -21,7 +22,7 @@ class AppBadge extends React.Component {
         const height = this.props.height
         const width = this.props.width
         const url = this.props.url
-        
+       
         var icon
 
         switch(version){
