@@ -18,6 +18,8 @@ import AppBadge from 'react-app-badge'
     url=""
 />
 ```
+![Google Logo](./src/badges/google-sample.png?raw=true)
+
 ## Properties
 
 Property | Type | Description
